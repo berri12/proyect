@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyect/features/screens/cart/ui/widget/cart_screen.dart';
 import 'package:proyect/features/screens/product/ui/product_view_screen.dart';
 
 void main() {
@@ -40,6 +41,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const ProductViewScreen();
+    return const CartScreen();
   }
 }
