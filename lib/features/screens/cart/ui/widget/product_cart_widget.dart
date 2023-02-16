@@ -10,12 +10,15 @@ class ProductCartwidget extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             vertical: 10,
             horizontal: 10,
           ),
           decoration: BoxDecoration(
-            color: Colors.grey,
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(
+              10,
+            ),
           ),
           child: Column(
             children: [
@@ -30,7 +33,7 @@ class ProductCartwidget extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    width: 30,
+                    width: 10,
                   ),
                   Icon(
                     Icons.close,
@@ -50,15 +53,15 @@ class ProductCartwidget extends StatelessWidget {
                   Image.network(
                     'https://tecnologiafenix.com/assets/uploads/780d3a40eeb3733d5b0b07329870d735.jpg',
                     height: 100,
-                    width: 100,
+                    width: 80,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('opcion celular xiaomi redmi note 11 4-128GB'),
-                      Text('Dual sim gris'),
-                      Text('Cantidad: 1'),
-                      Text('Precio unitario'),
+                      const Text('opcion celular xiaomi redmi note 11 4-128GB'),
+                      const Text('Dual sim gris'),
+                      const Text('Cantidad: 1'),
+                      const Text('Precio unitario'),
                       Row(
                         children: const [
                           Text(
@@ -114,12 +117,22 @@ class ProductCartwidget extends StatelessWidget {
                 ],
               ),
               Row(
-                children: const [
-                  Expanded(child: ButtonCartWidget()),
-                  SizedBox(
-                    width: 60,
+                children: [
+                  Expanded(
+                    child: ButtonCartWidget(
+                      iconL: Icons.shopping_cart_outlined,
+                      colorText: Colors.green,
+                      background: Colors.white,
+                      border: Colors.green,
+                      text: 'Guardar para despues',
+                      iconColor: Colors.green,
+                      onTap: () {},
+                    ),
                   ),
-                  ButtonCounterProductCartWidget()
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  const ButtonCounterProductCartWidget(),
                 ],
               )
             ],
