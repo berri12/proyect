@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:proyect/features/screens/cart/ui/widget/button_cart%20widget.dart';
+import 'package:proyect/features/screens/cart/ui/widget/dropdow_ubication_widget.dart';
 
-import 'button_for_day_widget.dart';
-import 'field_cart_widget.dart';
-import 'product_cart_widget.dart';
+import 'widget/button_for_day_widget.dart';
+import 'widget/field_cart_widget.dart';
+import 'widget/product_cart_widget.dart';
 
 class CartScreen extends StatefulWidget {
   CartScreen({super.key});
@@ -11,6 +12,7 @@ class CartScreen extends StatefulWidget {
   @override
   State<CartScreen> createState() => _CartScreenState();
   final TextEditingController controller = TextEditingController();
+  final controllerUbication = TextEditingController(text: 'ubication');
 }
 
 class _CartScreenState extends State<CartScreen> {
@@ -101,14 +103,12 @@ class _CartScreenState extends State<CartScreen> {
                     width: 80,
                   ),
                   const SizedBox(
-                    width: 15,
+                    width: 10,
                   ),
                   Column(
                     children: [
-                      FieldCartWidget(
-                        controller: widget.controller,
-                        textLabel: 'Departamento',
-                        textHinText: 'Seleccione',
+                      const DropdowUbicationWidget(
+                        text: 'Dep',
                       ),
                       FieldCartWidget(
                         controller: widget.controller,
