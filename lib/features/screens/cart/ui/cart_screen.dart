@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proyect/features/screens/cart/ui/widget/button_cart%20widget.dart';
+import 'package:proyect/features/screens/cart/ui/widget/button_total_widget.dart';
 import 'package:proyect/features/screens/cart/ui/widget/dropdow_ubication_widget.dart';
 
 import 'widget/button_for_day_widget.dart';
@@ -231,6 +232,7 @@ class _CartScreenState extends State<CartScreen> {
           ),
         ),
       ),
+      bottomNavigationBar: const ButtonTotalWidget(),
     );
   }
 }
