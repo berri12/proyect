@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:proyect/features/screens/cart/ui/cart_screen.dart';
 import 'package:proyect/features/screens/product/ui/product_view_screen.dart';
+import 'package:proyect/features/screens/search/ui/search_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,6 +42,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return CartScreen();
+    return SearchScreen();
   }
 }
