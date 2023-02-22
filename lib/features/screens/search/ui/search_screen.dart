@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../product/domain/product_entity.dart';
+import '../../product/domain/entities/product_entity.dart';
 import 'widget/tile_search_widget.dart';
 
 class SearchScreen extends StatefulWidget {

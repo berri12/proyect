@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:proyect/features/screens/product/domain/product_entity.dart';
+import 'package:proyect/features/screens/product/domain/entities/product_entity.dart';
+
 import 'package:proyect/features/screens/product/ui/widgets/bottom_navigation_bar_widget.dart';
 import 'package:proyect/features/screens/product/ui/widgets/button_product_widget.dart';
 import 'package:proyect/features/screens/product/ui/widgets/characteristics_product_Widget.dart';

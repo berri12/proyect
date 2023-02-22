@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proyect/features/screens/product/domain/product_entity.dart';
+import 'package:proyect/features/screens/product/domain/entities/product_entity.dart';
 import 'package:proyect/features/screens/product/ui/widgets/product_view_widget.dart';
 
 class ProductViewScreen extends StatelessWidget {
