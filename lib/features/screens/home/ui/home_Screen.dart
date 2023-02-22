@@ -29,13 +29,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size(10, 60),
+        preferredSize: Size(10, 106),
         child: _appBar(),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            HeaderHomeWidget(),
             CarrouselWidget(
               height: 220,
               viewportFraction: 1,
@@ -90,22 +89,27 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _appBar() {
-    return AppBar(
-      backgroundColor: Colors.orange.shade600,
-      title: TextFormField(
-        onChanged: (value) {
-          search = value;
-          setState(() {});
-        },
-        decoration: const InputDecoration(
-          hintText: 'Buscar en Proyect infiny',
+    return Column(
+      children: [
+        AppBar(
+          backgroundColor: Colors.orange.shade600,
+          title: TextFormField(
+            onChanged: (value) {
+              search = value;
+              setState(() {});
+            },
+            decoration: const InputDecoration(
+              hintText: 'Buscar en Proyect infiny',
+            ),
+          ),
+          actions: const [
+            Icon(
+              Icons.shopping_cart_outlined,
+              size: 35,
+            )
+          ],
         ),
-      ),
-      actions: const [
-        Icon(
-          Icons.shopping_cart_outlined,
-          size: 35,
-        )
+        HeaderHomeWidget(),
       ],
     );
   }
