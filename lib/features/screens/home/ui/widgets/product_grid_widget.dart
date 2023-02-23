@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:proyect/features/screens/product/domain/entities/product_entity.dart';
 import '../../../widgets/product_card_widget.dart';
 
-class ProductGridWidget extends StatelessWidget {
+class ProductGridWidget extends StatefulWidget {
   const ProductGridWidget({super.key});
 
+  @override
+  State<ProductGridWidget> createState() => _ProductGridWidgetState();
+}
+
+class _ProductGridWidgetState extends State<ProductGridWidget> {
   @override
   Widget build(BuildContext context) {
     List<ProductEntity>? products = <ProductEntity>[
@@ -27,19 +32,63 @@ class ProductGridWidget extends StatelessWidget {
         priceDiscount: '1600000',
         description: 'nukmllmlkl',
         stock: 3,
-      )
+      ),
+      ProductEntity(
+        id: 2,
+        image:
+            'https://repatin.com/72-large_default/combo-patin-onix-ultralight.jpg',
+        name: 'comp',
+        price: '1800000',
+        priceDiscount: '1600000',
+        description: 'nukmllmlkl',
+        stock: 3,
+      ),
+      ProductEntity(
+        id: 2,
+        image:
+            'https://repatin.com/72-large_default/combo-patin-onix-ultralight.jpg',
+        name: 'comp',
+        price: '1800000',
+        priceDiscount: '1600000',
+        description: 'nukmllmlkl',
+        stock: 3,
+      ),
+      ProductEntity(
+        id: 2,
+        image:
+            'https://repatin.com/72-large_default/combo-patin-onix-ultralight.jpg',
+        name: 'comp',
+        price: '1800000',
+        priceDiscount: '1600000',
+        description: 'nukmllmlkl',
+        stock: 3,
+      ),
+      ProductEntity(
+        id: 2,
+        image:
+            'https://repatin.com/72-large_default/combo-patin-onix-ultralight.jpg',
+        name: 'comp',
+        price: '1800000',
+        priceDiscount: '1600000',
+        description: 'nukmllmlkl',
+        stock: 3,
+      ),
     ];
-    return GridView.count(
-      physics: const ScrollPhysics(),
-      shrinkWrap: true,
-      crossAxisCount: 2,
-      childAspectRatio: 1 / 1.7,
-      children: [
-        for (ProductEntity product in products)
-          ProductCardWidget(
-            product: product,
-          ),
-      ],
+
+    return SizedBox(
+      height: 550,
+      child: GridView.count(
+        scrollDirection: Axis.horizontal,
+        shrinkWrap: true,
+        crossAxisCount: 2,
+        childAspectRatio: 1 / .8,
+        children: [
+          for (ProductEntity product in products)
+            ProductCardWidget(
+              product: product,
+            ),
+        ],
+      ),
     );
   }
 }

@@ -6,6 +6,8 @@ import 'package:proyect/features/screens/home/ui/widgets/product_grid_widget.dar
 import 'package:proyect/features/screens/product/domain/entities/product_entity.dart';
 import 'package:proyect/features/screens/widgets/product_card_widget.dart';
 
+import '../../../../util/images.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -29,29 +31,34 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size(10, 106),
+        preferredSize: const Size(10, 106),
         child: _appBar(),
       ),
       body: SingleChildScrollView(
+        physics: const ScrollPhysics(),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CarrouselWidget(
+            const CarrouselWidget(
               height: 220,
               viewportFraction: 1,
+              banners: Images.bannersPrincipal,
             ),
             const SizedBox(
               height: 10,
             ),
-            CarrouselWidget(
+            const CarrouselWidget(
               height: 180,
               viewportFraction: .8,
+              banners: Images.bannersSecundario,
             ),
             const SizedBox(
               height: 20,
             ),
-            CarrouselWidget(
+            const CarrouselWidget(
               height: 150,
               viewportFraction: .8,
+              banners: Images.bannersTerciario,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
@@ -81,7 +88,43 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            ProductGridWidget()
+            const CarrouselWidget(
+              height: 100,
+              viewportFraction: 1,
+              banners: Images.banner1,
+            ),
+            const ProductGridWidget(),
+            const CarrouselWidget(
+              height: 100,
+              viewportFraction: 1,
+              banners: Images.banner1,
+            ),
+            const ProductGridWidget(),
+            const CarrouselWidget(
+              height: 100,
+              viewportFraction: 1,
+              banners: Images.banner1,
+            ),
+            const ProductGridWidget(),
+            const CarrouselWidget(
+              height: 100,
+              viewportFraction: 1,
+              banners: Images.banner1,
+            ),
+            const ProductGridWidget(),
+            const Text(
+              'Tiendas oficiales',
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+            const CarrouselWidget(
+              height: 150,
+              viewportFraction: .8,
+              banners: Images.bannersTerciario,
+            ),
           ],
         ),
       ),
